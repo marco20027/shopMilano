@@ -87,7 +87,7 @@ function Home() {
                 <Typography variant="h3" component="h2" gutterBottom>
                     Passa nella nostra sezione acquisti !
                 </Typography><br></br>
-                <Button variant="contained" size="large">
+                <Button variant="contained" size="large" href='/Home/collection'>
                     Vai alla nostra sezione acquisti
                 </Button>
             </Container>

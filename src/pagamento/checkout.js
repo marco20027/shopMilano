@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Indirizzo di spedizione', 'Dettaglio pagamento', 'Paga'];
 
 function getStepContent(step) {
   switch (step) {
@@ -71,7 +71,7 @@ export default function Checkout() {
       >
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            Company name
+            Shop Milano
           </Typography>
         </Toolbar>
       </AppBar>
@@ -90,12 +90,12 @@ export default function Checkout() {
           {activeStep === steps.length ? (
             <React.Fragment>
               <Typography variant="h5" gutterBottom>
-                Thank you for your order.
+                Grazie per aver ordinato da noi.
               </Typography>
               <Typography variant="subtitle1">
-                Your order number is #2001539. We have emailed your order
-                confirmation, and will send you an update when your order has
-                shipped.
+              Il tuo numero d'ordine è #2001539. Abbiamo inviato il tuo ordine tramite e-mail
+                conferma, e ti invierà un aggiornamento quando il tuo ordine ha
+                spedito.
               </Typography>
             </React.Fragment>
           ) : (
@@ -104,7 +104,7 @@ export default function Checkout() {
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
                   <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-                    Back
+                    Indietro
                   </Button>
                 )}
 
@@ -113,7 +113,7 @@ export default function Checkout() {
                   onClick={handleNext}
                   sx={{ mt: 3, ml: 1 }}
                 >
-                  {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
+                  {activeStep === steps.length - 1 ? 'Place order' : 'Avanti'}
                 </Button>
               </Box>
             </React.Fragment>
