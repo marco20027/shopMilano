@@ -12,6 +12,9 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import  {useNavigate}  from 'react-router-dom';
+
 
 function Copyright(props) {
   return (
@@ -29,6 +32,45 @@ function Copyright(props) {
 const theme = createTheme();
 
  function SignInSide() {
+  const [email, setEmail] = useState(null)
+  const [password, setPassword] = useState(null)
+
+  const takeEmail = (event) => {
+    setEmail(event.target.value)
+  }
+  const takePassword = (event) => {
+    setPassword(event.target.value)
+    console.log(password)
+  }
+  const navigate = useNavigate();
+    const login = async () => {
+        if(email == null && password == null){
+            alert('inserire email e password')
+            return 
+        }else {
+            const response = await fetch("http://localhost:3001/login", {
+                 method: 'POST',
+                 headers: {
+                     "Content-Type": "application/json"
+                 },
+                 body: JSON.stringify({ email, password })
+             })
+             console.log(response)
+             const data = await response.json();
+             console.log(data)
+             if (data.token) {
+                 localStorage.setItem('token',data.token)
+                 console.log(data.token)
+                 navigate('/Home/login=success/Abbonamenti')
+             } else {
+                 window.alert("Email o password errata");
+             }
+            }
+
+         
+        
+    }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -82,6 +124,7 @@ const theme = createTheme();
                 name="email"
                 autoComplete="email"
                 autoFocus
+                onChange={(event)=>takeEmail(event)}
               />
               <TextField
                 margin="normal"
@@ -92,6 +135,7 @@ const theme = createTheme();
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={(event)=>takePassword(event)}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -102,7 +146,7 @@ const theme = createTheme();
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                href='/Home/login=success/Abbonamenti'
+                onClick={login}
               >
                 Login
               </Button>

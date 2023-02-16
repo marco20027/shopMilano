@@ -18,7 +18,6 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Box from '@mui/material/Box';
-import Checkout from '../pagamento/checkout';
 
 
 
@@ -129,7 +128,7 @@ function Collection() {
               </CardContent>
               <CardActions>
                 <Button size="small" >Dettaglio</Button> 
-                <Button size='small' variant="contained">Paga</Button>
+                <Button size='small' variant="contained" href="https://buy.stripe.com/test_eVa7wp6kZbBc4Uw5kk">Paga</Button>
               </CardActions>
             </Card>
           </Grid>
@@ -193,7 +192,7 @@ function Collection() {
               </CardContent>
               <CardActions>
               <Button size="small" >Dettaglio</Button> 
-                <Button size='small' variant="contained">Paga</Button>              
+                <Button size='small' variant="contained" href="https://buy.stripe.com/test_eVa7wp6kZbBc4Uw5kk">Paga</Button>              
                 </CardActions>
             </Card>
           </Grid>
@@ -257,7 +256,7 @@ function Collection() {
               </CardContent>
               <CardActions>
               <Button size="small" >Dettaglio</Button> 
-                <Button size='small' variant="contained" href='/Home/checkout'>Paga</Button>              
+                <Button size='small' variant="contained" href='https://buy.stripe.com/test_eVa7wp6kZbBc4Uw5kk'>Paga</Button>              
                 </CardActions>
             </Card>
           </Grid>
