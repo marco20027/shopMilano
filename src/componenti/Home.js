@@ -13,7 +13,7 @@ function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary">
             {'Copyright © '}
-            <Link color="inherit" href="http://localhost:3000/">
+            <Link color="inherit" href="https://shop-milano.vercel.app/Home">
                 Shopping Milano
             </Link>{' '}
             {new Date().getFullYear()}
