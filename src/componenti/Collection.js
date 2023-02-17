@@ -146,7 +146,7 @@ function Collection() {
                 alt="random" />
               <CardContent sx={{ flexGrow: 1 }}>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Maglia Fc Merde
+                  Maglia Fc Inter
                 </Typography>
                 <Typography>
                   <p>Fc Inter : {magliaFcInter.prodotto}</p><br></br>
