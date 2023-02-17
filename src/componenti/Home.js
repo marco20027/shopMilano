@@ -48,14 +48,6 @@ function Home() {
                             href="#"
                             sx={{ my: 1, mx: 1.5 }}
                         >
-                            Collaborazioni
-                        </Link>
-                        <Link
-                            variant="button"
-                            color="text.primary"
-                            href="#"
-                            sx={{ my: 1, mx: 1.5 }}
-                        >
                             Contatti
                         </Link>
                         <Link
@@ -90,6 +82,7 @@ function Home() {
                 <Button variant="contained" size="large" href='/Home/collection'>
                     Vai alla nostra sezione acquisti
                 </Button>
+                
             </Container>
 
             <Box
