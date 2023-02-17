@@ -45,7 +45,7 @@ function Home() {
                         <Link
                             variant="button"
                             color="text.primary"
-                            href="#"
+                            href="/contatti"
                             sx={{ my: 1, mx: 1.5 }}
                         >
                             Contatti
@@ -82,7 +82,7 @@ function Home() {
                 <Button variant="contained" size="large" href='/Home/collection'>
                     Vai alla nostra sezione acquisti
                 </Button>
-                
+
             </Container>
 
             <Box
