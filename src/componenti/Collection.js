@@ -47,7 +47,7 @@ function Collection() {
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           </Typography>
-          <Button color="inherit" href='http://localhost:3000/Home'>Home</Button>
+          <Button color="inherit" href='https://shop-milano.vercel.app/Home'>Home</Button>
         </Toolbar>
       </AppBar><br></br>
 
