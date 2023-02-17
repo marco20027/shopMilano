@@ -8,7 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
-//import StarIcon from '@mui/icons-material/StarBorder';
+import Alert from '@mui/material/Alert';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
@@ -101,6 +101,10 @@ function PricingContent() {
       </AppBar>
       {/* Hero unit */}
       <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
+        {setTimeout(() =>{
+        <Alert severity="success">
+              <strong>Login Effettuato !</strong>
+            </Alert>}, 2000)}
         <Typography
           component="h1"
           variant="h2"

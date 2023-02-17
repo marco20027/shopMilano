@@ -6,7 +6,6 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
@@ -44,23 +43,21 @@ const theme = createTheme();
   const navigate = useNavigate();
     const login = async () => {
         if(email == null && password == null){
-            alert('inserire email e password')
+          alert('inseire email o password')
             return 
         }else {
-            const response = await fetch("http://localhost:3001/login", {
+            const response = await fetch("http://localhost:3000/login", {
                  method: 'POST',
                  headers: {
                      "Content-Type": "application/json"
                  },
                  body: JSON.stringify({ email, password })
              })
-             console.log(response)
              const data = await response.json();
-             console.log(data)
-             if (data.token) {
-                 localStorage.setItem('token',data.token)
-                 console.log(data.token)
+             console.log(password, email)
+             if (email == data[0].email && password == data[0].password) {
                  navigate('/Home/login=success/Abbonamenti')
+                 console.log("success")
              } else {
                  window.alert("Email o password errata");
              }

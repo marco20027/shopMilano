@@ -62,7 +62,7 @@ function Home() {
                     <Button href='/login'  variant="outlined" sx={{ my: 1, mx: 1.5 }}>
                         Login
                     </Button>
-                    <Button href='#' variant='contained' sx={{ my: 1, mx: 1.5 }}>Registrati</Button>
+                    <Button href='/registrazione' variant='contained' sx={{ my: 1, mx: 1.5 }}>Registrati</Button>
                 </Toolbar>
             </AppBar>
             <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
