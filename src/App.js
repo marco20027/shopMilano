@@ -4,6 +4,7 @@ import Home from './componenti/Home.js'
 import Collection from './componenti/Collection'
 import SingSide from './componenti/login'
 import Pricing from './componenti/Abbonamenti';
+import Contatti  from './componenti/Contatti';
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path='/Home' element={<Home />} />
       <Route path='/login' element={<SingSide />} />
       <Route path='/Home/login=success/Abbonamenti' element={<Pricing />} /> 
+      <Route path='/contatti' element={<Contatti />} />
       </Routes>
     </div>
   );
