@@ -72,6 +72,8 @@ const footers = [
   },
 ];
 
+
+
 function PricingContent() {
   return (
     <React.Fragment>
@@ -101,10 +103,6 @@ function PricingContent() {
       </AppBar>
       {/* Hero unit */}
       <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }}>
-        {setTimeout(() =>{
-        <Alert severity="success">
-              <strong>Login Effettuato !</strong>
-            </Alert>}, 2000)}
         <Typography
           component="h1"
           variant="h2"
