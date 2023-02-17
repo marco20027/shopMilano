@@ -149,7 +149,7 @@ function Collection() {
                   Maglia Fc Merde
                 </Typography>
                 <Typography>
-                  <p>Fc Merde : {magliaFcInter.prodotto}</p><br></br>
+                  <p>Fc Inter : {magliaFcInter.prodotto}</p><br></br>
                   <p>Prezzo : {magliaFcInter.Prezzo}</p><br></br>
                   <Box
                     sx={{
